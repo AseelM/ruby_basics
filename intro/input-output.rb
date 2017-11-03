@@ -12,8 +12,7 @@ state_name = gets.chomp.capitalise!
 
 puts "hi #{first_name} #{last_name} from #{city_name}, #{state_name}"
 
-=begin
-(gets) takes input and chomp method just removes the extra added line
-#{variable_name} is called interpolation
-(puts) prints with an added line at the end
- when using string methods modified value can be assigned to a new var or the initial var can be reassigned the modified value with syntax variable_name.method!
+# (gets) takes input and chomp method just removes the extra added line
+# #{variable_name} is called interpolation
+# (puts) prints with an added line at the end
+# when using string methods modified value can be assigned to a new var or the initial var can be reassigned the modified value with syntax variable_name.method!

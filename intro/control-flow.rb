@@ -1,4 +1,4 @@
-=begin
+
 string = "something awesome is about to happen"
 age = 31
 
@@ -15,7 +15,7 @@ print "condition is false" unless condition
 
 # a short hand if statement. It will do whatever you ask unless the condition is true.
 
-=end
+
 print "Pleathe enter a thtring: "
 user_input = gets.chomp
 user_input.downcase!
