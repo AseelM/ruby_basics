@@ -25,3 +25,17 @@ food.each do |combination|
     puts item
   end
 end
+
+# .collect method takes a block an applies that block to every element in an array but it doesn't mutate the original (creates a copy) unless .collect!
+#.collect method does exactly what .map does
+
+fibs = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+doubled_fibs = fibs.collect {|fib| fib * 2}
+puts doubled_fibs
+#or
+fibs.collect! {|fib| fib * 2}
+puts fibs
+
+# .floor method rounds a float down to the nearest integer
+n = 3.79
+n.floor

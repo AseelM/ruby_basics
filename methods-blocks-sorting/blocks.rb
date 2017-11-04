@@ -1,4 +1,4 @@
-# blocks are nameless methods that can be defined by key words do end or {}
+# blocks are just a bit of code that can be executed block syntax is either between do and end or {} 
 1.times { print "howdie"}
 3.times do
   print "holla"
