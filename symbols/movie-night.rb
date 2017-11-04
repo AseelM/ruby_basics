@@ -14,29 +14,31 @@ puts "type 'delete' if you want to delete a movie from library"
 choice = gets.chomp.downcase
 
 case choice
+  
 when "add"
   puts "what movie do you want to add"
-  title = gets.chomp!
+  title = gets.chomp
   if movies_new_syntax[title.to_sym].nil?
     puts "what rating do you want to give it 0 to 4"
-    rating = gets.chomp!
+    rating = gets.chomp
     movies_new_syntax[title.to_sym] = rating.to_i
     puts "you have added #{title} with rating of #{rating}"
   else
     puts "movie already exists, what rating do you want to give it 0 to 4"
-    rating = gets.chomp!
+    rating = gets.chomp
     movies_new_syntax[title.to_sym] = rating.to_i
     puts "you have updated #{title}'s rating to #{rating}"
   end
+
 when "update"
   puts "which movie do you want to update"
-  title = gets.chomp!
+  title = gets.chomp
   if movies_new_syntax[title.to_sym].nil?
     puts "couldn't find title in library do you want to add it? yes or no"
     decision = gets.chomp.downcase
     if decision == "yes"
       puts "what rating do you want to give it 0 to 4"
-      rating = gets.chomp!
+      rating = gets.chomp
       movies_new_syntax[title.to_sym] = rating.to_i
       puts "you have added #{title} with rating of #{rating}"
     else
@@ -44,17 +46,19 @@ when "update"
     end
   else
     puts "what rating do you want to give it 0 to 4"
-    rating = gets.chomp!
+    rating = gets.chomp
     movies_new_syntax[title.to_sym] = rating.to_i
     puts "you have updated #{title}'s rating to #{rating}"
   end
+
   when "display"
     movies_new_syntax.each do |t, r|
       puts "#{t} with rating #{r}"
     end
+
   when "delete"
     puts "which movie do you want to delete"
-    title = gets.chomp!
+    title = gets.chomp
     if movies_new_syntax[title.to_sym].nil?
       puts "#{title} isn't in the library"
     else
